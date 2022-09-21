@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--//<manifest> = root element that defines app package and elements of it
+        (version name, installation location pref., etc.)-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ch3_helloworld">
+
+    <!--//<application> = attributes & child elements to configure how app works
+    (label, icon, theme, etc.)
+    //Each activity in app must have entry in this element-->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ch3HelloWorld"
+        tools:targetApi="31">
+
+        <!--//<activity> = tells OS that activity has permission to run in app
+        //All activities must be defined in manifest or it will crash-->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <!--//<intent-filter> = defines what Android OS should do w/ activity
+            //Activities you want users to launch while using app don't need intent-filters-->
+            <intent-filter>
+
+                <!--//<action> = defines activity as main/first to run-->
+                <action android:name="android.intent.action.MAIN" />
+
+                <!--//<category> = tells OS to use app launcher to start activity-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

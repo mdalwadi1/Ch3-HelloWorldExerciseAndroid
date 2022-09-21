@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Ch. 3 - Hello World</string>
+    <string name="name">Name:</string>
+    <string name="enter_your_name">enter your name</string>
+    <string name="display">Display</string>
+    <string name="welcome_message">Hello, %1$s</string>
+</resources>
+
+
+    <!--
+        //Android doesn't like concatenating strings while setting text
+            so use string value here w/ placeholder in it
+        // %1$s = placeholder for the text you'll put in
+            // %1 = first placeholder value (can have more than one)
+            // $s = indicates it's a string value-->
